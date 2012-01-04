@@ -19,7 +19,7 @@ qx.$$packageData = {};
 
 qx.$$loader = {
   parts : {"boot":[0]},
-  packages : {"0":{"uris":["__out__:rhyacotriton.0ec5a2051590.js"]}},
+  packages : {"0":{"uris":["__out__:rhyacotriton.f18dce3de35e.js"]}},
   urisBefore : [],
   cssBefore : [],
   boot : "boot",
@@ -17141,8 +17141,8 @@ this.__kK.stop(this.getSelectedIds());
 this.__pg.setDataAsMapArray(D.data);
 },__pl:function(event){var E=event.getData().id;
 console.log(f+E);
-var F=this.__pg.locate(this.__pj,index);
-if(F!=q)table.__pg.removeRows(F,1);
+var F=this.__pg.locate(this.__pj,E);
+if(F!=q)this.__pg.removeRows(F,1);
 },__pm:function(event){var G=event.getOldData();
 this.__pg.addRowsAsMapArray([G]);
 },particallyUpdateRows:function(H){for(var i=0,I=H.length;i<I;i++){var J=H[i];
