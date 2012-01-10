@@ -19,7 +19,7 @@ qx.$$packageData = {};
 
 qx.$$loader = {
   parts : {"boot":[0]},
-  packages : {"0":{"uris":["__out__:rhyacotriton.843e0b5717b7.js"]}},
+  packages : {"0":{"uris":["__out__:rhyacotriton.5e94f52eff7c.js"]}},
   urisBefore : [],
   cssBefore : [],
   boot : "boot",
@@ -17271,6 +17271,8 @@ this.__rn(bz.rows);
 
 for(var i in bA){var bC=bA[i];
 bB[i]=this.__rl(bC,[]);
+bB[i][this.__rf]=0;
+bB[i][this.__rg]=0;
 }this.debug("Bulk update.");
 this.__pp.addRows(bB,true,false);
 this.updateContent();
