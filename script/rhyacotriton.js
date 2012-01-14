@@ -19,7 +19,7 @@ qx.$$packageData = {};
 
 qx.$$loader = {
   parts : {"boot":[0]},
-  packages : {"0":{"uris":["__out__:rhyacotriton.5e94f52eff7c.js"]}},
+  packages : {"0":{"uris":["__out__:rhyacotriton.8526025e7802.js"]}},
   urisBefore : [],
   cssBefore : [],
   boot : "boot",
@@ -12719,45 +12719,46 @@ qx.Class.define(a,{extend:qx.core.Object,construct:function(){},members:{__lG:tr
 },setActive:function(g){this.__lG=g;
 }},events:{"stateChanged":b,"dataUpdated":c,"dataRemoved":c,"dataRemoveFailure":c,"dataLoadCompleted":c,"dataAdded":c}});
 })();
-(function(){var r="get_entire_torrent_list",q='/',p="stateChanged",o='WebSocket: ',n="rhyacotriton.store.Remote",m="There are some problems with bullet.",l="FIXME: deads are alive.",k='WebSocket: opened',j='http:',i='ws:',c="Old connection was closed",h='WebSocket: closed',g='https:',b="remove",a='wss:',f="stream",d='WebSocket: heartbeat';
-qx.Class.define(n,{extend:rhyacotriton.store.Abstract,construct:function(){rhyacotriton.store.Abstract.call(this);
-var s=document.location.href;
-s=s.replace(j,i).replace(g,a);
-s=s.substring(0,s.lastIndexOf(q))+q;
-this.__lH=s+f;
+(function(){var t="get_entire_torrent_list",s='/',r="stateChanged",q='WebSocket: ',p="rhyacotriton.store.Remote",o="There are some problems with bullet.",n="FIXME: deads are alive.",m="continue",l='http:',k='ws:',d="Old connection was closed",j='WebSocket: closed',h='WebSocket: opened',c="pause",b='https:',g="remove",f='wss:',i="stream",a='WebSocket: heartbeat';
+qx.Class.define(p,{extend:rhyacotriton.store.Abstract,construct:function(){rhyacotriton.store.Abstract.call(this);
+var u=document.location.href;
+u=u.replace(l,k).replace(b,f);
+u=u.substring(0,u.lastIndexOf(s))+s;
+this.__lH=u+i;
 this.__lJ();
-},members:{__lI:null,__lH:null,sendJSON:function(t){this.__lI.send(qx.lang.Json.stringify(t));
-},sendText:function(u){this.__lI.send(u);
+},members:{__lI:null,__lH:null,sendJSON:function(v){this.__lI.send(qx.lang.Json.stringify(v));
+},sendText:function(w){this.__lI.send(w);
 },reconnect:function(){this.__lK();
 this.__lJ();
-},reload:function(){this.sendText(r);
-},removeElement:function(v){var w=v.id;
-var x={"id":w};
-this.sendJSON({"event":b,"id":w});
-},stop:function(y){},start:function(z){},__lJ:function(){var B=$.bullet(this.__lH);
-var A=this;
-this.__lI=B;
-B.onopen=function(){console.log(k);
-A.sendText(r);
-A.setActive(true);
-A.fireEvent(p);
+},reload:function(){this.sendText(t);
+},removeElement:function(x){var y=x.id;
+this.sendJSON({"event":g,"id":y});
+},stop:function(z){this.sendJSON({"event":c,"ids":z});
+},start:function(A){this.sendJSON({"event":m,"ids":A});
+},__lJ:function(){var C=$.bullet(this.__lH);
+var B=this;
+this.__lI=C;
+C.onopen=function(){console.log(h);
+B.sendText(t);
+B.setActive(true);
+B.fireEvent(r);
 };
-B.onclose=function(){console.log(h);
-A.setActive(false);
-A.fireEvent(p);
+C.onclose=function(){console.log(j);
+B.setActive(false);
+B.fireEvent(r);
 };
-B.onmessage=function(e){console.log(o+e.data);
-var C=qx.lang.Json.parse(e.data);
-console.dir(C);
-A.fireDataEvent(C.event,C.data);
+C.onmessage=function(e){console.log(q+e.data);
+var D=qx.lang.Json.parse(e.data);
+console.dir(D);
+B.fireDataEvent(D.event,D.data);
 };
-B.onheartbeat=function(){console.log(d);
+C.onheartbeat=function(){console.log(a);
 };
 },__lK:function(){try{this.__lI.close();
-}catch(D){console.log(m);
-}this.__lI.onclose=function(){console.log(c);
+}catch(E){console.log(o);
+}this.__lI.onclose=function(){console.log(d);
 };
-this.__lI.onmessage=function(){console.log(l);
+this.__lI.onmessage=function(){console.log(n);
 };
 this.__lI.onheartbeat=this.__lI.onmessage;
 this.__lI.onclose=function(){};
