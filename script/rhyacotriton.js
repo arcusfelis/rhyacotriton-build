@@ -19,7 +19,7 @@ qx.$$packageData = {};
 
 qx.$$loader = {
   parts : {"boot":[0]},
-  packages : {"0":{"uris":["__out__:rhyacotriton.45bc9f050a5f.js"]}},
+  packages : {"0":{"uris":["__out__:rhyacotriton.5168095ea244.js"]}},
   urisBefore : [],
   cssBefore : [],
   boot : "boot",
@@ -305,72 +305,6 @@ while(cc){if(cc.$$includes){cd.push.apply(cd,cc.$$flatIncludes);
 },error:function(ck,cl){qx.Bootstrap.$$logs.push([v,arguments]);
 },trace:function(cm){}}});
 })();
-(function(){var a="qx.util.OOUtil";
-qx.Bootstrap.define(a,{statics:{classIsDefined:qx.Bootstrap.classIsDefined,getPropertyDefinition:qx.Bootstrap.getPropertyDefinition,hasProperty:qx.Bootstrap.hasProperty,getEventType:qx.Bootstrap.getEventType,supportsEvent:qx.Bootstrap.supportsEvent,getByInterface:qx.Bootstrap.getByInterface,hasInterface:qx.Bootstrap.hasInterface,getMixins:qx.Bootstrap.getMixins}});
-})();
-(function(){var h="qx.Mixin",g=".prototype",f="constructor",e="Array",d="[Mixin ",c="]",b="destruct",a="Mixin";
-qx.Bootstrap.define(h,{statics:{define:function(name,j){if(j){if(j.include&&!(qx.Bootstrap.getClass(j.include)===e)){j.include=[j.include];
-}var m=j.statics?j.statics:{};
-qx.Bootstrap.setDisplayNames(m,name);
-
-for(var k in m){if(m[k] instanceof Function){m[k].$$mixin=m;
-}}if(j.construct){m.$$constructor=j.construct;
-qx.Bootstrap.setDisplayName(j.construct,name,f);
-}
-if(j.include){m.$$includes=j.include;
-}
-if(j.properties){m.$$properties=j.properties;
-}
-if(j.members){m.$$members=j.members;
-qx.Bootstrap.setDisplayNames(j.members,name+g);
-}
-for(var k in m.$$members){if(m.$$members[k] instanceof Function){m.$$members[k].$$mixin=m;
-}}
-if(j.events){m.$$events=j.events;
-}
-if(j.destruct){m.$$destructor=j.destruct;
-qx.Bootstrap.setDisplayName(j.destruct,name,b);
-}}else{var m={};
-}m.$$type=a;
-m.name=name;
-m.toString=this.genericToString;
-m.basename=qx.Bootstrap.createNamespace(name,m);
-this.$$registry[name]=m;
-return m;
-},checkCompatibility:function(n){var q=this.flatten(n);
-var r=q.length;
-
-if(r<2){return true;
-}var u={};
-var t={};
-var s={};
-var p;
-
-for(var i=0;i<r;i++){p=q[i];
-
-for(var o in p.events){if(s[o]){throw new Error('Conflict between mixin "'+p.name+'" and "'+s[o]+'" in member "'+o+'"!');
-}s[o]=p.name;
-}
-for(var o in p.properties){if(u[o]){throw new Error('Conflict between mixin "'+p.name+'" and "'+u[o]+'" in property "'+o+'"!');
-}u[o]=p.name;
-}
-for(var o in p.members){if(t[o]){throw new Error('Conflict between mixin "'+p.name+'" and "'+t[o]+'" in member "'+o+'"!');
-}t[o]=p.name;
-}}return true;
-},isCompatible:function(v,w){var x=qx.util.OOUtil.getMixins(w);
-x.push(v);
-return qx.Mixin.checkCompatibility(x);
-},getByName:function(name){return this.$$registry[name];
-},isDefined:function(name){return this.getByName(name)!==undefined;
-},getTotalNumber:function(){return qx.Bootstrap.objectGetLength(this.$$registry);
-},flatten:function(y){if(!y){return [];
-}var z=y.concat();
-
-for(var i=0,l=y.length;i<l;i++){if(y[i].$$includes){z.push.apply(z,this.flatten(y[i].$$includes));
-}}return z;
-},genericToString:function(){return d+this.name+c;
-},$$registry:{},__c:null,__d:function(){}}});
-})();
 (function(){var cq="qx.bom.client.CssTransform.get3D",cp="default",co="|",cn="qx.allowUrlSettings",cm="qx.bom.client.Stylesheet.getInsertRule",cl="css.transform.3d",ck="qx.bom.client.Html.getDataset",cj="qx.bom.client.PhoneGap.getPhoneGap",ci="qx.bom.client.Html.getAudioAif",ch="qx.debug.dispose",bt="qx.bom.client.Xml.getAttributeNS",bs="qx.bom.client.Stylesheet.getRemoveImport",br="qx.bom.client.Css.getUserModify",bq="qx.bom.client.Css.getBoxShadow",bp="qx.bom.client.Event.getHashChange",bo="qx.bom.client.Plugin.getWindowsMedia",bn="qx.bom.client.Html.getVideo",bm="qx.bom.client.Device.getName",bl="qx.bom.client.Event.getTouch",bk="qx.optimization.strings",cx="qx.optimization.variables",cy="qx.bom.client.EcmaScript.getStackTrace",cv="qx.bom.client.EcmaScript.getObjectCount",cw="qx.bom.client.Xml.getSelectSingleNode",ct="css.gradient.linear",cu="qx.bom.client.Xml.getImplementation",cr="qx.bom.client.Html.getConsole",cs="qx.bom.client.Engine.getVersion",cz="qx.bom.client.Plugin.getQuicktime",cA="qx.propertyDebugLevel",bR="qx.bom.client.Html.getNaturalDimensions",bQ="qx.bom.client.Xml.getSelectNodes",bT="qx.bom.client.Xml.getElementsByTagNameNS",bS="qx.bom.client.Html.getDataUrl",bV="qx.bom.client.Flash.isAvailable",bU="qx.bom.client.Html.getCanvas",bX="qx.bom.client.Css.getBoxModel",bW="qx.bom.client.Plugin.getSilverlight",bP="qx.bom.client.Css.getUserSelect",bO="qx.bom.client.Css.getRadialGradient",a="module.property",b="qx.bom.client.Plugin.getWindowsMediaVersion",c="qx.bom.client.Stylesheet.getCreateStyleSheet",d="qx.bom.client.Locale.getLocale",e="module.events",f="module.databinding",g="qx.bom.client.Html.getFileReader",h="qx.bom.client.Css.getBorderImage",j="qx.bom.client.Stylesheet.getDeleteRule",k="qx.bom.client.Plugin.getDivXVersion",cE="qx.bom.client.Scroll.scrollBarOverlayed",cD="qx.bom.client.Plugin.getPdfVersion",cC=":",cB="qx.bom.client.Css.getLinearGradient",cI="qx.bom.client.Transport.getXmlHttpRequest",cH="qx.bom.client.Html.getClassList",cG="qx.bom.client.Event.getHelp",cF="qx.optimization.comments",cK="qx.bom.client.Locale.getVariant",cJ="qx.bom.client.Css.getBoxSizing",J="qx.bom.client.OperatingSystem.getName",K="module.logger",H="qx.bom.client.Css.getOverflowXY",I="qx.mobile.emulatetouch",N="qx.bom.client.Html.getAudioWav",O="qx.bom.client.Browser.getName",L="qx.bom.client.Css.getInlineBlock",M="qx.bom.client.Plugin.getPdf",F="qx.dynlocale",G="qx.bom.client.Html.getAudio",s="qx.core.Environment",r="qx.bom.client.CssTransform.getSupport",u="qx.bom.client.Html.getTextContent",t="qx.bom.client.Css.getPlaceholder",o="qx.bom.client.Css.getFloat",n="false",q="qx.bom.client.Html.getXul",p="qx.bom.client.Xml.getCreateNode",m="qxenv",l="qx.bom.client.Html.getSessionStorage",T="qx.bom.client.Html.getAudioAu",U="qx.bom.client.Css.getOpacity",V="qx.bom.client.Html.getVml",W="qx.bom.client.Css.getRgba",P="qx.bom.client.Transport.getMaxConcurrentRequestCount",Q="qx.bom.client.Css.getBorderRadius",R="qx.bom.client.Event.getPointer",S="qx.bom.client.Css.getGradients",X="qx.bom.client.Transport.getSsl",Y="qx.bom.client.Html.getWebWorker",C="qx.bom.client.Json.getJson",B="qx.bom.client.Browser.getQuirksMode",A="qx.bom.client.Css.getTextOverflow",z="qx.bom.client.Xml.getQualifiedItem",y="qx.bom.client.Html.getVideoOgg",x="&",w="qx.bom.client.Browser.getDocumentMode",v="qx.allowUrlVariants",E="qx.bom.client.Html.getContains",D="qx.bom.client.Plugin.getActiveX",ba=".",bb="qx.bom.client.Xml.getDomProperties",bc="qx.bom.client.CssAnimation.getSupport",bd="qx.debug.databinding",be="qx.optimization.basecalls",bf="qx.bom.client.Browser.getVersion",bg="qx.bom.client.Css.getUserSelectNone",bh="true",bi="qx.bom.client.Html.getSvg",bj="qx.optimization.privates",bx="qx.bom.client.Plugin.getDivX",bw="qx.bom.client.Runtime.getName",bv="qx.bom.client.Html.getLocalStorage",bu="qx.bom.client.Flash.getStrictSecurityModel",bB="qx.aspects",bA="qx.debug",bz="qx.dynamicmousewheel",by="qx.bom.client.Html.getAudioMp3",bD="qx.bom.client.Engine.getName",bC="qx.bom.client.Plugin.getGears",bK="qx.bom.client.Plugin.getQuicktimeVersion",bL="qx.bom.client.Html.getAudioOgg",bI="qx.bom.client.Plugin.getSilverlightVersion",bJ="qx.bom.client.Html.getCompareDocumentPosition",bG="qx.bom.client.Flash.getExpressInstall",bH="qx.bom.client.OperatingSystem.getVersion",bE="qx.bom.client.Html.getXPath",bF="qx.bom.client.Html.getGeoLocation",bM="qx.bom.client.Css.getAppearance",bN="qx.mobile.nativescroll",ca="qx.bom.client.Xml.getDomParser",bY="qx.bom.client.Stylesheet.getAddImport",cc="qx.optimization.variants",cb="qx.bom.client.Html.getVideoWebm",ce="qx.bom.client.Flash.getVersion",cd="qx.bom.client.PhoneGap.getNotification",cg="qx.bom.client.Html.getVideoH264",cf="qx.bom.client.Xml.getCreateElementNS";
 qx.Bootstrap.define(s,{statics:{_checks:{},_asyncChecks:{},__e:{},_checksMap:{"engine.version":cs,"engine.name":bD,"browser.name":O,"browser.version":bf,"browser.documentmode":w,"browser.quirksmode":B,"runtime.name":bw,"device.name":bm,"locale":d,"locale.variant":cK,"os.name":J,"os.version":bH,"os.scrollBarOverlayed":cE,"plugin.gears":bC,"plugin.activex":D,"plugin.quicktime":cz,"plugin.quicktime.version":bK,"plugin.windowsmedia":bo,"plugin.windowsmedia.version":b,"plugin.divx":bx,"plugin.divx.version":k,"plugin.silverlight":bW,"plugin.silverlight.version":bI,"plugin.flash":bV,"plugin.flash.version":ce,"plugin.flash.express":bG,"plugin.flash.strictsecurity":bu,"plugin.pdf":M,"plugin.pdf.version":cD,"io.maxrequests":P,"io.ssl":X,"io.xhr":cI,"event.touch":bl,"event.pointer":R,"event.help":cG,"event.hashchange":bp,"ecmascript.objectcount":cv,"ecmascript.stacktrace":cy,"html.webworker":Y,"html.filereader":g,"html.geolocation":bF,"html.audio":G,"html.audio.ogg":bL,"html.audio.mp3":by,"html.audio.wav":N,"html.audio.au":T,"html.audio.aif":ci,"html.video":bn,"html.video.ogg":y,"html.video.h264":cg,"html.video.webm":cb,"html.storage.local":bv,"html.storage.session":l,"html.classlist":cH,"html.xpath":bE,"html.xul":q,"html.canvas":bU,"html.svg":bi,"html.vml":V,"html.dataset":ck,"html.dataurl":bS,"html.console":cr,"html.stylesheet.createstylesheet":c,"html.stylesheet.insertrule":cm,"html.stylesheet.deleterule":j,"html.stylesheet.addimport":bY,"html.stylesheet.removeimport":bs,"html.element.contains":E,"html.element.compareDocumentPosition":bJ,"html.element.textcontent":u,"html.image.naturaldimensions":bR,"json":C,"css.textoverflow":A,"css.placeholder":t,"css.borderradius":Q,"css.borderimage":h,"css.boxshadow":bq,"css.gradients":S,"css.gradient.linear":cB,"css.gradient.radial":bO,"css.boxmodel":bX,"css.rgba":W,"css.userselect":bP,"css.userselect.none":bg,"css.usermodify":br,"css.appearance":bM,"css.float":o,"css.boxsizing":cJ,"css.translate3d":cq,"css.animation":bc,"css.transform":r,"css.transform.3d":cq,"css.inlineblock":L,"css.opacity":U,"css.overflowxy":H,"phonegap":cj,"phonegap.notification":cd,"xml.implementation":cu,"xml.domparser":ca,"xml.selectsinglenode":cw,"xml.selectnodes":bQ,"xml.getelementsbytagnamens":bT,"xml.domproperties":bb,"xml.attributens":bt,"xml.createnode":p,"xml.getqualifieditem":z,"xml.createelementns":cf},get:function(cL){if(qx.Bootstrap.DEBUG){var cN={"css.translate3d":cl,"css.gradients":ct,"ecmascript.objectcount":null};
 
@@ -507,6 +441,72 @@ if(dG==bh){dG=true;
 dL.__g();
 if(dL.get(cn)===true){dL.__h();
 }}});
+})();
+(function(){var a="qx.util.OOUtil";
+qx.Bootstrap.define(a,{statics:{classIsDefined:qx.Bootstrap.classIsDefined,getPropertyDefinition:qx.Bootstrap.getPropertyDefinition,hasProperty:qx.Bootstrap.hasProperty,getEventType:qx.Bootstrap.getEventType,supportsEvent:qx.Bootstrap.supportsEvent,getByInterface:qx.Bootstrap.getByInterface,hasInterface:qx.Bootstrap.hasInterface,getMixins:qx.Bootstrap.getMixins}});
+})();
+(function(){var h="qx.Mixin",g=".prototype",f="constructor",e="Array",d="[Mixin ",c="]",b="destruct",a="Mixin";
+qx.Bootstrap.define(h,{statics:{define:function(name,j){if(j){if(j.include&&!(qx.Bootstrap.getClass(j.include)===e)){j.include=[j.include];
+}var m=j.statics?j.statics:{};
+qx.Bootstrap.setDisplayNames(m,name);
+
+for(var k in m){if(m[k] instanceof Function){m[k].$$mixin=m;
+}}if(j.construct){m.$$constructor=j.construct;
+qx.Bootstrap.setDisplayName(j.construct,name,f);
+}
+if(j.include){m.$$includes=j.include;
+}
+if(j.properties){m.$$properties=j.properties;
+}
+if(j.members){m.$$members=j.members;
+qx.Bootstrap.setDisplayNames(j.members,name+g);
+}
+for(var k in m.$$members){if(m.$$members[k] instanceof Function){m.$$members[k].$$mixin=m;
+}}
+if(j.events){m.$$events=j.events;
+}
+if(j.destruct){m.$$destructor=j.destruct;
+qx.Bootstrap.setDisplayName(j.destruct,name,b);
+}}else{var m={};
+}m.$$type=a;
+m.name=name;
+m.toString=this.genericToString;
+m.basename=qx.Bootstrap.createNamespace(name,m);
+this.$$registry[name]=m;
+return m;
+},checkCompatibility:function(n){var q=this.flatten(n);
+var r=q.length;
+
+if(r<2){return true;
+}var u={};
+var t={};
+var s={};
+var p;
+
+for(var i=0;i<r;i++){p=q[i];
+
+for(var o in p.events){if(s[o]){throw new Error('Conflict between mixin "'+p.name+'" and "'+s[o]+'" in member "'+o+'"!');
+}s[o]=p.name;
+}
+for(var o in p.properties){if(u[o]){throw new Error('Conflict between mixin "'+p.name+'" and "'+u[o]+'" in property "'+o+'"!');
+}u[o]=p.name;
+}
+for(var o in p.members){if(t[o]){throw new Error('Conflict between mixin "'+p.name+'" and "'+t[o]+'" in member "'+o+'"!');
+}t[o]=p.name;
+}}return true;
+},isCompatible:function(v,w){var x=qx.util.OOUtil.getMixins(w);
+x.push(v);
+return qx.Mixin.checkCompatibility(x);
+},getByName:function(name){return this.$$registry[name];
+},isDefined:function(name){return this.getByName(name)!==undefined;
+},getTotalNumber:function(){return qx.Bootstrap.objectGetLength(this.$$registry);
+},flatten:function(y){if(!y){return [];
+}var z=y.concat();
+
+for(var i=0,l=y.length;i<l;i++){if(y[i].$$includes){z.push.apply(z,this.flatten(y[i].$$includes));
+}}return z;
+},genericToString:function(){return d+this.name+c;
+},$$registry:{},__c:null,__d:function(){}}});
 })();
 (function(){var d="qx.core.Aspect",c="before",b="*",a="static";
 qx.Bootstrap.define(d,{statics:{__j:[],wrap:function(e,f,g){var m=[];
@@ -10958,9 +10958,86 @@ this.setStyle(k,A,true);
 })();
 (function(){var a="rhyacotriton.Application";
 qx.Class.define(a,{extend:qx.application.Standalone,members:{main:function(){qx.application.Standalone.prototype.main.call(this);
+qx.log.appender.Native;
 this.__kH=new rhyacotriton.Container;
 this.getRoot().add(this.__kH,{edge:0});
 }}});
+})();
+(function(){var l="'>",k="[",h=", ",g="</span>",f="<span class='type-",e="</span> ",d="}",c="",b="]",a="\n",M="{",L="map",K="Use qx.dev.StackTrace.FORMAT_STACKTRACE instead",J="function",I="<span class='object'>",H="]:",G="&gt;",F="<span class='object' title='Object instance with hash code: ",E="FORMAT_STACK",D="string",s="level-",t="0",q="&lt;",r="<span class='offset'>",o=":",p="qx.log.appender.Util",m="&amp;",n="&#39;",u="DIV",v="<span>",y="&quot;",x="<span class='type-key'>",A="</span>:<span class='type-",z="</span>: ",C=" ",B="]</span>: ",w="?";
+qx.Class.define(p,{statics:{toHtml:function(N){var X=[];
+var U,W,P,R;
+X.push(r,this.formatOffset(N.offset,6),e);
+
+if(N.object){var O=N.win.qx.core.ObjectRegistry.fromHashCode(N.object);
+
+if(O){X.push(F+O.$$hash+l,O.classname,k,O.$$hash,B);
+}}else if(N.clazz){X.push(I+N.clazz.classname,z);
+}var Q=N.items;
+
+for(var i=0,V=Q.length;i<V;i++){U=Q[i];
+W=U.text;
+
+if(W instanceof Array){var R=[];
+
+for(var j=0,T=W.length;j<T;j++){P=W[j];
+
+if(typeof P===D){R.push(v+this.escapeHTML(P)+g);
+}else if(P.key){R.push(x+P.key+A+P.type+l+this.escapeHTML(P.text)+g);
+}else{R.push(f+P.type+l+this.escapeHTML(P.text)+g);
+}}X.push(f+U.type+l);
+
+if(U.type===L){X.push(M,R.join(h),d);
+}else{X.push(k,R.join(h),b);
+}X.push(g);
+}else{X.push(f+U.type+l+this.escapeHTML(W)+e);
+}}var S=document.createElement(u);
+S.innerHTML=X.join(c);
+S.className=s+N.level;
+return S;
+},formatOffset:function(Y,length){var bc=Y.toString();
+var ba=(length||6)-bc.length;
+var bb=c;
+
+for(var i=0;i<ba;i++){bb+=t;
+}return bb+bc;
+},FORMAT_STACK:null,escapeHTML:function(bd){return String(bd).replace(/[<>&"']/g,this.__rS);
+},__rS:function(be){var bf={"<":q,">":G,"&":m,"'":n,'"':y};
+return bf[be]||w;
+},toText:function(bg){return this.toTextArray(bg).join(C);
+},toTextArray:function(bh){var bp=[];
+bp.push(this.formatOffset(bh.offset,6));
+
+if(bh.object){var bi=bh.win.qx.core.ObjectRegistry.fromHashCode(bh.object);
+
+if(bi){bp.push(bi.classname+k+bi.$$hash+H);
+}}else if(bh.clazz){bp.push(bh.clazz.classname+o);
+}var bj=bh.items;
+var bm,bo;
+
+for(var i=0,bn=bj.length;i<bn;i++){bm=bj[i];
+bo=bm.text;
+
+if(bm.trace&&bm.trace.length>0){if(typeof (this.FORMAT_STACK)==J){qx.log.Logger.deprecatedConstantWarning(qx.log.appender.Util,E,K);
+bo+=a+this.FORMAT_STACK(bm.trace);
+}else{bo+=a+bm.trace;
+}}
+if(bo instanceof Array){var bk=[];
+
+for(var j=0,bl=bo.length;j<bl;j++){bk.push(bo[j].text);
+}
+if(bm.type===L){bp.push(M,bk.join(h),d);
+}else{bp.push(k,bk.join(h),b);
+}}else{bp.push(bo);
+}}return bp;
+}}});
+})();
+(function(){var c="html.console",b="qx.log.appender.Native",a="log";
+qx.Class.define(b,{statics:{process:function(d){if(qx.core.Environment.get(c)){var f=console[d.level]?d.level:a;
+
+if(console[f]){var e=qx.log.appender.Util.toText(d);
+console[f](e);
+}}}},defer:function(g){qx.log.Logger.register(g);
+}});
 })();
 (function(){var s="execute",r="",q="north",p="Control+S",o="log",n="horizontal",m="Control+R",l="Control+P",k="peers",j="stateChanged",c="value",i="changeSelection",g="Control+A",b="main",a="files",f="rhyacotriton.Container",d="Control+Shift+R",h="Control+D";
 qx.Class.define(f,{extend:qx.ui.container.Composite,construct:function(){this.__kI=new qx.ui.layout.Dock();
@@ -17658,108 +17735,116 @@ for(var j=0;j<bO;++j){bP[j]=bM[i][this.getColumnId(j)];
 }},destruct:function(){this.__py=this.__pB=this.__pA=this.__pC=null;
 }});
 })();
-(function(){var e='undefined',d="rhyacotriton.BasicTable",c="Position ",b="object",a="changeSelection";
-qx.Class.define(d,{extend:qx.ui.table.Table,construct:function(f){this.__pE=new smart.model.Default;
-this.__pF=f;
+(function(){var g='undefined',f="rhyacotriton.BasicTable",d="Position ",c="changeSelection",b="undefined",a="object";
+qx.Class.define(f,{extend:qx.ui.table.Table,construct:function(h){this.__pE=new smart.model.Default;
+this.__pF=h;
 this.__pG=[];
 this.__pH=[];
 this.__pI=[];
 var i=0;
 
-for(var name in this.__pF){var g=this.__pF[name];
+for(var name in this.__pF){var k=this.__pF[name];
 this.__pG[name]=i;
 this.__pH[i]=name;
-this.__pI[i]=g;
+this.__pI[i]=k;
 i++;
 }delete i;
 this.__pE.setColumns(this.__pI,this.__pH);
 qx.ui.table.Table.call(this,this.__pE);
-var k=this.__qc=this.getSelectionModel();
-k.setSelectionMode(qx.ui.table.selection.Model.MULTIPLE_INTERVAL_SELECTION);
-var l=this.getColumnNameToPositionIndex();
-var h=this.__pE;
-h.indexedSelection(l.id,k);
-h.addIndex(l.id);
-this.__rQ={"dataAdded":this.__qi,"dataRemoved":this.__qk,"dataRemoveFailure":this.__onDataRemoveFailure,"dataLoadCompleted":this.__qh,"dataUpdated":this.__qo};
-},members:{__pE:null,__qc:null,__rQ:null,__pG:null,__pH:null,__pI:null,setColumnNames:function(m){},getColumnNameToPositionIndex:function(){return this.__pG;
-},logSelectedRows:function(){var n=this.__pE;
-this.__qc.iterateSelection(function(o){console.log(c+o);
-console.dir(n.getRowData(o));
+var m=this.__qc=this.getSelectionModel();
+m.setSelectionMode(qx.ui.table.selection.Model.MULTIPLE_INTERVAL_SELECTION);
+var n=this.getColumnNameToPositionIndex();
+var l=this.__pE;
+l.indexedSelection(n.id,m);
+l.addIndex(n.id);
+this.__rQ={"dataAdded":this.__qi,"dataRemoved":this.__qk,"dataRemoveFailure":this.__qm,"dataLoadCompleted":this.__qh,"dataUpdated":this.__qo};
+},members:{__pE:null,__qc:null,__rQ:null,__pG:null,__pH:null,__pI:null,setColumnNames:function(o){},getColumnNameToPositionIndex:function(){return this.__pG;
+},logSelectedRows:function(){var p=this.__pE;
+this.__qc.iterateSelection(function(q){console.log(d+q);
+console.dir(p.getRowData(q));
 });
-},getSelectedIds:function(){var r=[];
-var p=this.__pE;
-var q=this.getColumnNameToPositionIndex();
-this.__qc.iterateSelection(function(s){r.push(p.getValue(q.id,s));
+},getSelectedIds:function(){var t=[];
+var r=this.__pE;
+var s=this.getColumnNameToPositionIndex();
+this.__qc.iterateSelection(function(u){t.push(r.getValue(s.id,u));
 });
-return r;
-},particallyUpdateRows:function(t){var y=this.__pE;
-var z=this.getColumnNameToPositionIndex();
+return t;
+},particallyUpdateRows:function(v){var A=this.__pE;
+var B=this.getColumnNameToPositionIndex();
 
-for(var i=0,u=t.length;i<u;i++){var A=t[i];
+for(var i=0,w=v.length;i<w;i++){var C=v[i];
 
-if(typeof (A.id)==e)this.error("Cannot get Rows[i].id");
-var x=y.locate(z.id,A.id);
+if(typeof (C.id)==g)this.error("Cannot get Rows[i].id");
+var z=A.locate(B.id,C.id);
 
-if(isNaN(x)){this.error("Cannot locate row.");
+if(isNaN(z)){this.error("Cannot locate row.");
 continue;
-}var v=y.getRowData(x,undefined,false);
+}var x=A.getRowData(z,undefined,false);
 
-if(typeof (v)!=b){this.error("Cannot retrieve old values.");
+if(typeof (x)!=a){this.error("Cannot retrieve old values.");
 continue;
-}var w=v.slice(0);
-w=this.fillFields(A,w,false);
-var x=y.locate(z.id,A.id);
-y.setRow(x,w);
+}var y=x.slice(0);
+y=this.fillFields(C,y,false);
+var z=A.locate(B.id,C.id);
+A.setRow(z,y);
 }},removeSelectedRows:function(){this.info("RemoveSelectedRows");
 this.logSelectedRows();
-var B=this;
-var C=this.getSelectedIds();
-this.__ql(C);
-},addRows:function(D){var E=[];
+var D=this;
+var E=this.getSelectedIds();
+this.__ql(E);
+},addRows:function(F){var G=[];
 
-for(var i in D){var F=D[i];
-E[i]=this.fillFields(F,[],true);
+for(var i in F){var H=F[i];
+G[i]=this.fillFields(H,[],true);
 }this.debug("Bulk update.");
-this.__pE.addRows(E,true,false);
+this.__pE.addRows(G,true,false);
 this.updateContent();
-},__ql:function(G){for(var i in G){this.info("Purge from the table entry by real id "+H);
-var H=G[i];
-var I=this.__pE.locate(this.__indexColumnId,H);
-if(I!=e)this.__pE.removeRows(I,1);
-}},fillFields:function(J,K,L){var M=this.getColumnNameToPositionIndex();
+},__ql:function(I){for(var i in I){this.info("Purge from the table entry by real id "+J);
+var J=I[i];
+var K=this.__pE.locate(this.__indexColumnId,J);
+if(K!=g)this.__pE.removeRows(K,1);
+}},fillFields:function(L,M,N){var O=this.getColumnNameToPositionIndex();
 
-for(var j in J){var N=M[j];
-K[N]=J[j];
-}return K;
-},getEventHandler:function(name){return this.__rQ[name];
-},__qh:function(event){var O=event.getData();
+for(var j in L){var P=O[j];
+M[P]=L[j];
+}return M;
+},getEventHandler:function(name){var e=this.__rQ[name];
+
+if(typeof (e)==b)throw new Error("Bad name "+name);
+return e;
+},__qh:function(event){var Q=event.getData();
 
 try{this.__pE.removeRows(0,undefined,undefined,false);
-}catch(P){this.debug("Is the table empty?");
-}this.addRows(O.rows);
-},__qi:function(event){var Q=event.getData();
-this.addRows(Q.rows);
-},__qk:function(event){var R=event.getData().rows;
-this.__ql(R);
-},__qo:function(event){var S=event.getData();
-this.particallyUpdateRows(S.rows);
-},__rR:[],initFilters:function(T){var V=this.getColumnNameToPositionIndex();
-var U=this.getTableModel();
-var X=U.getView();
-var W=U.addView(function(Y){var ba=Y[V.torrent_id];
-return (this.__rR.indexOf(ba)!=-1);
+}catch(R){this.debug("Is the table empty?");
+}this.addRows(Q.rows);
+},__qi:function(event){var S=event.getData();
+this.addRows(S.rows);
+},__qk:function(event){var T=event.getData().rows;
+this.__ql(T);
+},__qm:function(event){var U=event.getOldData();
+this.__pE.addRowsAsMapArray([U]);
+},__qo:function(event){var V=event.getData();
+this.particallyUpdateRows(V.rows);
+},__rR:[],__rY:undefined,__sa:undefined,__sb:undefined,initFilters:function(W){var ba=this.getColumnNameToPositionIndex();
+var X=this.getTableModel();
+this.__sb=W;
+this.__rY=X.getView();
+this.__sa=X.addView(function(bb){var bc=bb[ba.torrent_id];
+return (this.__rR.indexOf(bc)!=-1);
 },this);
-T.getSelectionModel().addListener(a,function(){this.info("change selection");
-var bb=T.getSelectedIds();
+var Y=W.getSelectionModel();
+Y.addListener(c,this.updateFilters,this);
+},updateFilters:function(e){this.info("change selection");
+var bd=this.__pE;
+var be=this.__sb.getSelectedIds();
 
-if(this.__rR==bb)return;
-this.__rR=bb;
+if(this.__rR==be)return;
+this.__rR=be;
 
-if(bb.length==0){U.setView(X);
-}else{if(U.getView()!=W)U.setView(W);
-U.updateView(W);
-}},this);
-}}});
+if(be.length==0){bd.setView(this.__rY);
+}else{if(bd.getView()!=this.__sa)bd.setView(this.__sa);
+bd.updateView(this.__sa);
+}}}});
 })();
 (function(){var bF="number",bE="",bD="string",bC="10.addRows.view0.number.assert-is-sorted",bB="object",bA="22.addRows.view0.number.getValue",bz="14.setValue.view1.getRowCount",by="6.setData.view1.number.assert-is-sorted",bx="or",bw="13.setValue.view0.assert-is-sorted",bl="8.setData.view0.number.assert-is-sorted",bk="21.random-deletions.view2.assert-subset",bj="21.random-deletions.view0.assert-set-equivalence",bi="14.setValue.view1.assert-locatable",bh="...",bg="14.setValue.view1.number.assert-is-sorted",bf="5.removeRows.view0.getRowCount",be="and",bd="test",bc="1.addRows.view0.getRowCount",bM="2.setData.view0.number.getValueById",bN="6.setData.view0.number.assert-is-sorted",bK="18.removeRows.view2.assert-empty",bL="12.setValue.view0.getValue",bI="14.setValue.view0.getValue",bJ="4.addRows.view0.number.getValueById",bG="22.addRows.view0.number.getValueById",bH="15.setValue.view0.getRowCount",bO="17.addViews.view2.assert-filter",bP="16.setValue.view0.getRowCount",bp="16.changeSort.view1.number.assert-is-sorted",bo="16.setValue.view1.getRowCount",br="6.removeRows.view0.getRowCount",bq="11.view0.locate.V3",bt="15.setValue.view0.assert-is-sorted",bs="7.setData.view0.number.assert-is-sorted",bv="2.setData.view0.getRowCount",bu="5.setData.view1.number.assert-is-sorted",bn="test!",bm="18.removeRows.view0.assert-removed",a="3.addRows.view0.getRowCount",b="smart.MSmartUnitTests",c="11.view0.locate.V2",d="3.addRows.view0.number.getValueById",g="4.addRows.view1.number.assert-is-sorted",h="20.random-adds.view0.count",k="1.addRows.view0.number.getValueById",l="13.setValue.view1.number.assert-is-sorted",m="19.clearAllRows.assert-all-views-empty",n="3.addRows.view0.number.getValue",bT="1.addRows.view0.number.getValue",bS="2.setData.view1.number.assert-is-sorted",bR="unit test failed: ",bQ=": ",bX="4.addRows.view0.number.getValue",bW="13.setValue.view1.getRowCount",bV="7.setData.view1.number.assert-is-sorted",bU="0.getColumnIndexById",ca="16.changeSort.view0.assert-is-sorted",bY="17.addViews.view2.disjoint",J="all unit tests passed",K="12.setValue.view0.assert-is-sorted",G="14.setValue.view0.getRowCount",H="12.setValue.view1.number.assert-is-sorted",O="2.setData.view0.number.assert-is-sorted",P="20.random-adds.assert-sort",L="3.addRows.view0.number.assert-is-sorted",M="14.setValue.view0.assert-is-sorted",E="17.addViews.view3.assert-filter",F="9.setData.view0.number.assert-is-sorted",w="SOME UNIT TESTS FAILED",u="15.setValue.view1.getRowCount",z="4.addRows.view0.number.assert-is-sorted",y="8.setData.view1.number.assert-is-sorted",r="3.addRows.view1.number.assert-is-sorted",q="4.addRows.view0.getRowCount",t="13.setValue.view1.assert-is-filtered",s="13.setValue.view1.assert-not-locatable",p="13.setValue.view0.getValue",o="15.setValue.view1.getValue",V="15.setValue.view0.getValue",W="15.setValue.view1.number.assert-is-sorted",X="7.removeRows.view0.getRowCount",Y="14.setValue.view1.assert-is-not-filtered",Q="2.setData.view0.number.getValue",S="9.removeRows.view0.getRowCount",T="8.removeRows.view0.getRowCount",U="22.addRows.view0.getRowCount",ba="5.setData.view0.number.assert-is-sorted",bb="10.addRows.view0.getRowCount",D="17.addViews.view2.rowsum",B="13.setValue.view0.getRowCount";
 qx.Mixin.define(b,{members:{testsFailed:false,__qp:function(name,f){var cb=false;
@@ -19275,47 +19360,46 @@ if(y>x)return 1;
 };
 }},events:{"stateChanged":b,"dataUpdated":d,"dataRemoved":d,"dataRemoveFailure":d,"dataLoadCompleted":d,"peerDataLoadCompleted":d,"dataAdded":d}});
 })();
-(function(){var u="all_torrents",t='/',s="stateChanged",r='WebSocket: ',q="rhyacotriton.store.Remote",p="There are some problems with bullet.",o="FIXME: deads are alive.",n="continue",m='http:',l="all_peers",d='ws:',k="Old connection was closed",h='WebSocket: closed',c='WebSocket: opened',b="pause",g='https:',f="remove",i='wss:',a="stream",j='WebSocket: heartbeat';
-qx.Class.define(q,{extend:rhyacotriton.store.Abstract,construct:function(){rhyacotriton.store.Abstract.call(this);
-var v=document.location.href;
-v=v.replace(m,d).replace(g,i);
-v=v.substring(0,v.lastIndexOf(t))+t;
-this.__rw=v+a;
+(function(){var n="all_torrents",m='/',l="stateChanged",k="rhyacotriton.store.Remote",j="continue",i='http:',h="all_peers",g='ws:',f="pause",d='https:',a="remove",c='wss:',b="stream";
+qx.Class.define(k,{extend:rhyacotriton.store.Abstract,construct:function(){rhyacotriton.store.Abstract.call(this);
+var o=document.location.href;
+o=o.replace(i,g).replace(d,c);
+o=o.substring(0,o.lastIndexOf(m))+m;
+this.__rw=o+b;
 this.__ry();
-},members:{__rx:null,__rw:null,sendJSON:function(w){this.__rx.send(qx.lang.Json.stringify(w));
-},sendText:function(x){this.__rx.send(x);
+},members:{__rx:null,__rw:null,sendJSON:function(p){this.__rx.send(qx.lang.Json.stringify(p));
+},sendText:function(q){this.__rx.send(q);
 },reconnect:function(){this.__rz();
 this.__ry();
-},reload:function(){this.sendText(u);
-},reloadPeers:function(){this.sendText(l);
-},removeElement:function(y){var z=y.id;
-this.sendJSON({"event":f,"id":z});
-},stop:function(A){this.sendJSON({"event":b,"ids":A});
-},start:function(B){this.sendJSON({"event":n,"ids":B});
-},__ry:function(){var D=$.bullet(this.__rw);
-var C=this;
-this.__rx=D;
-D.onopen=function(){console.log(c);
-C.sendText(u);
-C.setActive(true);
-C.fireEvent(s);
+},reload:function(){this.sendText(n);
+},reloadPeers:function(){this.sendText(h);
+},removeElement:function(r){var s=r.id;
+this.sendJSON({"event":a,"id":s});
+},stop:function(t){this.sendJSON({"event":f,"ids":t});
+},start:function(u){this.sendJSON({"event":j,"ids":u});
+},__ry:function(){var w=$.bullet(this.__rw);
+var v=this;
+this.__rx=w;
+w.onopen=function(){v.info('WebSocket: opened');
+v.sendText(n);
+v.setActive(true);
+v.fireEvent(l);
 };
-D.onclose=function(){console.log(h);
-C.setActive(false);
-C.fireEvent(s);
+w.onclose=function(){v.info('WebSocket: closed');
+v.setActive(false);
+v.fireEvent(l);
 };
-D.onmessage=function(e){console.log(r+e.data);
-var E=qx.lang.Json.parse(e.data);
-console.dir(E);
-C.fireDataEvent(E.event,E.data);
+w.onmessage=function(e){v.info('WebSocket: '+e.data);
+var x=qx.lang.Json.parse(e.data);
+v.fireDataEvent(x.event,x.data);
 };
-D.onheartbeat=function(){console.log(j);
+w.onheartbeat=function(){v.info('WebSocket: heartbeat');
 };
 },__rz:function(){try{this.__rx.close();
-}catch(F){console.log(p);
-}this.__rx.onclose=function(){console.log(k);
+}catch(y){this.error("There are some problems with bullet.",y);
+}this.__rx.onclose=function(){this.info("Old connection was closed");
 };
-this.__rx.onmessage=function(){console.log(o);
+this.__rx.onmessage=function(){this.error("FIXME: deads are alive.");
 };
 this.__rx.onheartbeat=this.__rx.onmessage;
 this.__rx.onclose=function(){};
